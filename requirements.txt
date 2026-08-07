@@ -1,0 +1,16 @@
+# Web自动化
+selenium>=4.15.0
+playwright>=1.44.0
+
+# 接口自动化
+pytest>=7.4.0
+requests>=2.31.0
+allure-pytest>=2.13.0
+
+# Windows桌面自动化
+pywinauto>=0.6.8
+uiautomation>=2.0.18
+
+# 工具开发与报告
+pyyaml>=6.0.1
+pytest-html>=3.2.0

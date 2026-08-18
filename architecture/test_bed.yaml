@@ -1,0 +1,18 @@
+zentao:
+  server:
+    protocol: http
+    host: &host
+      127.0.0.1
+    port: 80
+    baseUrl: zentao/api.php/v2
+    account:
+      username: admin
+      password: Aa123456
+  db:
+    host: *host
+    port: 3306
+    user: root
+    password: Aa123456
+    database: zentao
+    charset: utf8mb4
+

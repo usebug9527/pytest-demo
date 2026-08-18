@@ -1,0 +1,21 @@
+testcase:
+  token:
+    - caseName: get_token_1
+      caseData:
+        account: admin
+        password: Aa123456
+
+#    - caseName: get_token_2
+  user:
+    - caseName: create_user_1
+      caseData:
+        account: user1001
+        realname: user1001
+        password: Aa123456
+#    - caseName: create_user_2
+#      caseData:
+#        account: user1002
+#        realname: user1002
+#        password: Aa123456
+#      expect:
+#        status: success

@@ -87,7 +87,7 @@ class User(Base):
             user = User()
             user.__setattr__('id', rsp.json()['id'])
             return user
-        return rsp
+        return rsp.text
 
     @staticmethod
     def get_user_list(r: RestApi,
@@ -123,7 +123,7 @@ class User(Base):
                 user_list.append(us)
             return user_list
 
-        return rsp
+        return rsp.text
 
     @staticmethod
     def edit_user_by_id(r: RestApi, userID: Any,
@@ -170,7 +170,7 @@ class User(Base):
                 for k, v in rsp.json()['user'].items():
                     us.__setattr__(k, v)
                 return us
-            return rsp
+            return rsp.text
         except ValueError:
             return None
 
@@ -184,7 +184,7 @@ class User(Base):
         }
         """
         try:
-            return r.send(f'/users/{int(userID)}', method="DELETE", timeout=timeout)
+            return r.send(f'/users/{int(userID)}', method="DELETE", timeout=timeout).json()
         except ValueError:
             return None
 
@@ -215,7 +215,7 @@ class User(Base):
                 for k, v in rsp.json()['user'].items():
                     us.__setattr__(k, v)
                 return us
-            return rsp
+            return rsp.text
         except ValueError:
             return None
 

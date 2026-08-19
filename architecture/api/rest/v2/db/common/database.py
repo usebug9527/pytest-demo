@@ -25,7 +25,7 @@ class Database(DB):
             result_list = cursor.fetchall() # 获取全部
 
             print("查询结果：", result_list)
-
+            return result_list
         except Exception as e:
             conn.rollback()  # 出错回滚
             print("异常：", e)

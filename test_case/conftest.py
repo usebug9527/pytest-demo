@@ -83,6 +83,7 @@ def case_data(request):
     :param request: pytest内置对象，可获取当前执行用例的模块、函数信息
     :return: 当前用例对应的接口请求参数字典
     """
+    print('case_data')
     # # 获取当前测试文件完整路径
     file_path = Path(request.module.__file__)
     module_name = file_path.parent.name

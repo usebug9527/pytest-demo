@@ -7,7 +7,7 @@ testcase:
 
 #    - caseName: get_token_2
   user:
-    - caseName: create_user_1
+    - caseName: test_create_account
       caseData:
         account: user1001
         realname: user1001

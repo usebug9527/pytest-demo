@@ -5,15 +5,16 @@ import logging
 LOG = logging.getLogger(__name__)
 
 
-class TestUser:
+class TestCreateUser:
 
-    def test_create_account(self, init_token, case_params):
-        api = init_token
-        user_list = User.get_user_list(api)
-        LOG.info(f"user_list:{user_list}")
-        for user in user_list:
-            LOG.info(f"user:{user.id}")
-        print("test_create_account")
+    def test_create_account(self, rest, case_data):
+        user = User.create_user(rest, case_data['account'], case_data['realname'], case_data['password'], )
+        if isinstance(user, User):
+            LOG.info(f"user id:{user.id}")
+            assert user.id
+        else:
+            LOG.error(f"rsp:{user}")
+
 
     # def test_edit_account(self, request):
     #     print("test_edit_account")
